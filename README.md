@@ -130,12 +130,12 @@
 
   1. After deploying your Jump Box and VMs with the correct configuration and inbound/outbound rules you will need to `SSH` into your Jump Box to deploy your Docker Container.
     
-    * `ssh` into your Jump Box using `ssh username@JumpBoxIP`
-    * First install Docker io by running `sudo apt update` and then `sudo apt install docker.io`
-    * Verify `docker.io` is runnning `sudo systemctl status docker`
+   * `ssh` into your Jump Box using `ssh username@JumpBoxIP`
+   * First install Docker io by running `sudo apt update` and then `sudo apt install docker.io`
+   * Verify `docker.io` is runnning `sudo systemctl status docker`
         *If not running use `sudo systemctl start docker` to start service*
-    * Once docker has installed you will need to pull your container `sudo docker pull cyberxsecurity/ansible:latest`
-    * Drop into root and launch the container `docker run -ti cyberxsecurity/ansible:latest bash`
+   * Once docker has installed you will need to pull your container `sudo docker pull cyberxsecurity/ansible:latest`
+   * Drop into root and launch the container `docker run -ti cyberxsecurity/ansible:latest bash`
     
    2. Set a rule to allow your Jump Box full access to your Vnet
      * Navigate to Security Group settings and to add rules allowing SSH connections from your IP address
