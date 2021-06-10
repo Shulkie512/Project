@@ -178,7 +178,7 @@
   5. Next we will create a YAML playbook file to use for configuration
   6. Run `nano /etc/ansible/pentest.yml` to create your playbook
 
-  Your YAML should look like this 
+  *  Your YAML should look like this 
    
    
    `---
