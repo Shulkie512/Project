@@ -181,8 +181,8 @@
   *  Your YAML should look like this 
    
    
-   `---
-   
+   `
+    ---
      - name: Config Web VM with Docker
        hosts: webservers
        become: true
