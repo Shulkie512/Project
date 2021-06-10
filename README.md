@@ -111,7 +111,7 @@
 ## Setting up Jump Box Administration
 
   1. Create an Inbound Rule to allow SSH connections from your IP
-      * **+ Add* 
+    ..* **+ Add* 
       * Set Source to IP Address
       * Paste you IP 
       * Set source port range to *Any*
