@@ -91,12 +91,12 @@
        * Paste your Public key
        * Public inbound ports should be set to *Allow selected ports*
        *  Select inbound ports set to SSH 22
-      ..* Networking tab
-              * Choose the Virtual Network you created
-              * Creat a New Public IP and make it static
-              * Set NIC to advanced and choose the Security Group you created
-              * Click *Review & Create* Check that your selctions are correct
-              * Click *Create*
+   * Networking tab
+        * Choose the Virtual Network you created
+        * Creat a New Public IP and make it static
+        * Set NIC to advanced and choose the Security Group you created
+        * Click *Review & Create* Check that your selctions are correct
+        * Click *Create*
 
   5. Create 2 more VMs named Web1 and Web 2
       * Set the Resource and security group to what you created
@@ -111,7 +111,7 @@
 ## Setting up Jump Box Administration
 
   1. Create an Inbound Rule to allow SSH connections from your IP
-    * **+ Add* 
+      * Select **+ Add* 
       * Set Source to IP Address
       * Paste you IP 
       * Set source port range to *Any*
@@ -129,6 +129,7 @@
 ## Docker Container SetUp
 
   1. After deploying your Jump Box and VMs with the correct configuration and inbound/outbound rules you will need to `SSH` into your Jump Box to deploy your Docker Container.
+    
     * `ssh` into your Jump Box using `ssh username@JumpBoxIP`
     * First install Docker io by running `sudo apt update` and then `sudo apt install docker.io`
     * Verify `docker.io` is runnning `sudo systemctl status docker`
