@@ -13,24 +13,24 @@
 
 1. On the Azure page search for *Resource groups* 
 2. Once you are in the *Resource groups* directory choose **+ Add** on the top left or click the blue *Create resource group* button.
-..* Choose correct Azure subscriptioin
-..* Name your resource group
-..* Choose a region
+* Choose correct Azure subscriptioin
+* Name your resource group
+* Choose a region
 3. Click *Review & Create*, check that your selections are correct
-..* Click *Create*
+* Click *Create*
 
 ### Creating A Vnet
 
 1. Go back to the Home page on Azure
 2. Search for *Virtual Networks*
 3. Within *Virtual Networks* choose **+ Add** on the left or click the blue *Create Virtual Network* button
-..* Choose correct Azure Subscription
-..* Choose the Resource Group made in previous step
-..* Choose same region as your resource group
-..* Leave IP addresses set to *default*
-..* In the Security tab set all to *disabled*
+* Choose correct Azure Subscription
+* Choose the Resource Group made in previous step
+* Choose same region as your resource group
+* Leave IP addresses set to *default*
+* In the Security tab set all to *disabled*
 4. Click *Review & Create*, check that your selections are correct and have the same regions from previous step
-..* Click *Create*
+* Click *Create*
 
 ### Setup A Network Security Group (Firewall)
 
@@ -253,7 +253,15 @@
   * Name security rule
 
 * After adding new rules, go back and delete the Default Deny All rule
-* Verify you can reach your DVWA App
+* Verify you can reach your DVWA App from the browser over the internet
+* Open your browser and enter the Load Balancer public IP address and add `/setup.php`
+
+## Setting up redundancy
+
+1. Start up your VMs in Azure Portal
+2. Make sure you can connect to your VMs
+3. Stop one of your VMs and check to see if your DVWA is still accessible
+4. If you can still connect your redudancy is working
 
   
 
@@ -270,7 +278,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   - _TODO: Enter the playbook file._
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
