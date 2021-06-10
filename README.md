@@ -83,15 +83,15 @@
        * Set size to B1s
   4. Administrator account should be set as follows:
         * SSH Public Key
-          ..* Open Gitbash on your machine
-              * Run `cd ~/.ssh ls` If files are present you are set. If not run `ssh_keygen` do NOT set a password
-              * Run `cat ~/.ssh/id_rsa.pub` and copy your key
-              * Set your Username
-              * Choose to Use and existing public key
-              * Paste your Public key
-              * Public inbound ports should be set to *Allow selected ports*
-              *  Select inbound ports set to SSH 22
-          ..* Networking tab
+         * Open Gitbash on your machine
+          * Run `cd ~/.ssh ls` If files are present you are set. If not run `ssh_keygen` do NOT set a password
+           * Run `cat ~/.ssh/id_rsa.pub` and copy your key
+           * Set your Username
+           * Choose to Use and existing public key
+           * Paste your Public key
+           * Public inbound ports should be set to *Allow selected ports*
+           *  Select inbound ports set to SSH 22
+      ..* Networking tab
               * Choose the Virtual Network you created
               * Creat a New Public IP and make it static
               * Set NIC to advanced and choose the Security Group you created
