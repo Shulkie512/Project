@@ -36,14 +36,14 @@
 
 1. Navigate back to the Azure Portal home screen, search for *Netwrok Security Groups*
 2. Click **+ Add** on the top left
-..* Choose correct Azure Subscription
-..* Choose the *Resource Group* you made in step 1
-..* Name your Security group
-..* Choose same region
+ * Choose correct Azure Subscription
+ * Choose the *Resource Group* you made in step 1
+ * Name your Security group
+ * Choose same region
 4. Click *Review & Create*, Check your selections and region
-..* Click *Create*
+ * Click *Create*
   * Click *Go to Resource*
-    ..* On left, click *Inbound Security Rules*
+      * On left, click *Inbound Security Rules*
       * Click **+ Add**
       * Set Source to *IP Address* Got to [IP4.me] to get your IP and copy your IP
       * Paste your IP
@@ -54,7 +54,7 @@
       * Leave Protocol and Action set to default
       * Set Priority to *500*
       * Name the rule *Allow RDP*
-      ..* Set description to "Allow RDP from external IP over port 3389"
+      * Set description to "Allow RDP from external IP over port 3389"
       * Click *Add*
  5. Navigate back to *Inbound Security Rules*
       * Click *+ Add*
@@ -74,13 +74,13 @@
   1. Navigate to the Azure Portal Home page
   2. Search for *Virtual Machines*
   3. Select **+ Add** and choose Virtual Machine
-     ..* Choose correct subscription
-     ..* Choose the Resource you created
-     ..* Name VM Jump-Box-Provisioner
-          * Choose correct Region
-          * Leave Availability 
-          * Image should be set to Ubuntu 18.04
-          * Set size to B1s
+      * Choose correct subscription
+      * Choose the Resource you created
+      * Name VM Jump-Box-Provisioner
+       * Choose correct Region
+       * Leave Availability 
+       * Image should be set to Ubuntu 18.04
+       * Set size to B1s
   4. Administrator account should be set as follows:
         * SSH Public Key
           ..* Open Gitbash on your machine
