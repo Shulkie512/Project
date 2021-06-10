@@ -179,7 +179,8 @@
   6. Run `nano /etc/ansible/pentest.yml` to create your playbook
 
   Your YAML should look like this 
-    `---
+   
+   `---
      - name: Config Web VM with Docker
        hosts: webservers
        become: true
