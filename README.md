@@ -84,13 +84,13 @@
   4. Administrator account should be set as follows:
        * SSH Public Key
        * Open Gitbash on your machine
-        * Run `cd ~/.ssh ls` If files are present you are set. If not run `ssh_keygen` do NOT set a password
-         * Run `cat ~/.ssh/id_rsa.pub` and copy your key
-         * Set your Username
-         * Choose to Use and existing public key
-         * Paste your Public key
-         * Public inbound ports should be set to *Allow selected ports*
-         *  Select inbound ports set to SSH 22
+       * Run `cd ~/.ssh ls` If files are present you are set. If not run `ssh_keygen` do NOT set a password
+       * Run `cat ~/.ssh/id_rsa.pub` and copy your key
+       * Set your Username
+       * Choose to Use and existing public key
+       * Paste your Public key
+       * Public inbound ports should be set to *Allow selected ports*
+       *  Select inbound ports set to SSH 22
       ..* Networking tab
               * Choose the Virtual Network you created
               * Creat a New Public IP and make it static
@@ -111,7 +111,7 @@
 ## Setting up Jump Box Administration
 
   1. Create an Inbound Rule to allow SSH connections from your IP
-    ..* **+ Add* 
+    * **+ Add* 
       * Set Source to IP Address
       * Paste you IP 
       * Set source port range to *Any*
@@ -128,7 +128,7 @@
 
 ## Docker Container SetUp
 
-  ..* After deploying your Jump Box and VMs with the correct configuration and inbound/outbound rules you will need to `SSH` into your Jump Box to deploy your Docker Container.
+  1. After deploying your Jump Box and VMs with the correct configuration and inbound/outbound rules you will need to `SSH` into your Jump Box to deploy your Docker Container.
     * `ssh` into your Jump Box using `ssh username@JumpBoxIP`
     * First install Docker io by running `sudo apt update` and then `sudo apt install docker.io`
     * Verify `docker.io` is runnning `sudo systemctl status docker`
@@ -136,7 +136,7 @@
     * Once docker has installed you will need to pull your container `sudo docker pull cyberxsecurity/ansible:latest`
     * Drop into root and launch the container `docker run -ti cyberxsecurity/ansible:latest bash`
     
-   1. Set a rule to allow your Jump Box full access to your Vnet
+   2. Set a rule to allow your Jump Box full access to your Vnet
     ..* Navigate to Security Group settings and to add rules allowing SSH connections from your IP address
       * Set source to IP Address and add the private IP of your Jump Box
       * Source port ranges set to Any
@@ -158,11 +158,11 @@
    5. Run `cat .ssh/id_rsa.pub` to display your key
    6. Copy your key and return to your Aure Portal and locate your VM detail page
    7. Reset your VMs password and use your container's new public key for the SSH user
-    ..* Test your connection using ssh from your Jump Box Ansible container using the internal IP of your VM
+     * Test your connection using ssh from your Jump Box Ansible container using the internal IP of your VM
    8. Locate the config and host file for Ansible and Add your internal IP to the Host file
-    ..* Open with `nano /etc/ansible/hosts`
+     * Open with `nano /etc/ansible/hosts`
       * Uncomment the `[webservers]` header and add the IP under `[webservers]`
-        ..* Add `ansible_python_interpreter=/usr/bin/python3` next to each IP
+         * Add `ansible_python_interpreter=/usr/bin/python3` next to each IP
    9. Change the Ansible config file to use your administrator account for SSH connections
    10. Open file with `nano /etc/ansible/ansible.cfg`
    11. Find and uncomment `remote_user` and replace `root` with your admin username
@@ -215,7 +215,7 @@
          
    7. Save and the run your playbook with `ansible-playbook /etc/ansible/pentest.yml`
    8. If no errors occur check that the DVWA site is up
-   ..* SSH into your VM from your Ansible container `ssh user@internalIP`
+    * SSH into your VM from your Ansible container `ssh user@internalIP`
    9. Run `curl localhost/setup.php` to test the connection, you should get HTML from the DVWA container
 
 
@@ -233,7 +233,7 @@
  10. Add a health probe to make sure VMs are receiving traffic
  11. Create a back end pool and add Web 1 and Web 2
 
-..* Create a load balancing rule to forward port 80 from the load balancer to your Vnet
+ * Create a load balancing rule to forward port 80 from the load balancer to your Vnet
   * Name your rule
   * Choose IPv4
   * Leave frontend IP alone
