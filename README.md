@@ -296,44 +296,45 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting unwanted access to the network.
-- _Load Balancers protect against DoS attacks, if one of the servers goes down another server will pick up traffic. The Jump Box allows you to securly access the network via SSH from a specified IP address.
+- _Load Balancers protect against DDoS attacks, allows for traffic to flow between more than one server to maintain uptime. The Jump Box allows you to securly access the network via SSH from a specified IP address to make changes to your environment.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
+- _TODO: What does Filebeat watch for?_ Changes to log files or specified locations to collects log events and forwards them either to Elasticsearch/Logstash to be indexed.
+- _TODO: What does Metricbeat record?_ Metrics from the system and services running on the server.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name     | Function  | IP Address | Operating System |
+|----------|---------- |------------|------------------|
+| Jump Box | Gateway   | 10.0.0.4   | Linux            |
+| Web 1    | Webserver | 10.0.0.5   | Linux            |
+| Web 2    | Webserver | 10.0.0.6   | Linux            |
+| ELK      | Monitoring| 10.1.0.4   | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Admins public IP address
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the Jump Box.
+- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_ The created Jump Box machine via the Docker container 20.185.180.89
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
-
+| Name     | Publicly Accessible |  Allowed IP Addresses |
+|----------|---------------------| ----------------------|
+| Jump Box | Yes                 |  Admin Public IP      |
+| Web 1    | No                  | 10.0.0.4  10.1.0.4    |
+| Web 2    | No                  | 10.0.0.4  10.1.0.4    |
+| ELK      | No                  | 10.0.0.4              |
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- _TODO: What is the main advantage of automating configuration with Ansible?_ 
+- Ansible allows you to quickly install, update, add web servers to your network by using the same playbooks.
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
