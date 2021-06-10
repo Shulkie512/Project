@@ -137,7 +137,7 @@
     * Drop into root and launch the container `docker run -ti cyberxsecurity/ansible:latest bash`
     
    2. Set a rule to allow your Jump Box full access to your Vnet
-    ..* Navigate to Security Group settings and to add rules allowing SSH connections from your IP address
+     * Navigate to Security Group settings and to add rules allowing SSH connections from your IP address
       * Set source to IP Address and add the private IP of your Jump Box
       * Source port ranges set to Any
       * Destination set to VirtualNetwork
