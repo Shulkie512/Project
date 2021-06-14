@@ -283,7 +283,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
  [Elk YML](https://github.com/Shulkie512/Project/blob/main/ElkInstall.txt)
  [Filebeat](https://github.com/Shulkie512/Project/blob/main/FilebeatPlaybook.txt)
- [Metricbeat](
+ [Metricbeat](https://github.com/Shulkie512/Project/blob/main/metricbeatPlaybook.txt)
 
 This document contains the following details:
 - Description of the Topology
@@ -306,7 +306,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - What does Metricbeat record? Metrics from the system and services running on the server.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function  | IP Address | Operating System |
 |----------|---------- |------------|------------------|
@@ -333,16 +332,18 @@ A summary of the access policies in place can be found in the table below.
 | Web 1    | No                  | 10.0.0.4  10.1.0.4    |
 | Web 2    | No                  | 10.0.0.4  10.1.0.4    |
 | ELK      | No                  | 10.0.0.4              |
+
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- What is the main advantage of automating configuration with Ansible?
 - Ansible allows you to quickly install, update, add web servers to your network by using the same playbooks.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Install docker.io
+- Install pip3
+- Install Docker python module
+- Use more memory
+- Download and launch a Docker elk container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
