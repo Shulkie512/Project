@@ -32,4 +32,3 @@
     systemd:
       name: docker
       enabled: yes
-root@a0eac2c51878:/etc/ansible#
