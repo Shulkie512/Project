@@ -297,11 +297,11 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting unwanted access to the network.
-- _Load Balancers protect against DDoS attacks, allows for traffic to flow between more than one server to maintain uptime. The Jump Box allows you to securly access the network via SSH from a specified IP address to make changes to your environment.
+- Load Balancers protect against DDoS attacks, allows for traffic to flow between more than one server to maintain uptime. The Jump Box allows you to securly access the network via SSH from a specified IP address to make changes to your environment.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
-- _TODO: What does Filebeat watch for?_ Changes to log files or specified locations to collects log events and forwards them either to Elasticsearch/Logstash to be indexed.
-- _TODO: What does Metricbeat record?_ Metrics from the system and services running on the server.
+- What does Filebeat watch for? Changes to log files or specified locations to collects log events and forwards them either to Elasticsearch/Logstash to be indexed.
+- What does Metricbeat record? Metrics from the system and services running on the server.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -321,7 +321,7 @@ Only the Jump Box machine can accept connections from the Internet. Access to th
 Admins public IP address
 
 Machines within the network can only be accessed by the Jump Box.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_ The created Jump Box machine via the Docker container 20.185.180.89
+- Which machine did you allow to access your ELK VM? What was its IP address? The created Jump Box machine via the Docker container 20.185.180.89
 
 A summary of the access policies in place can be found in the table below.
 
@@ -334,7 +334,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_ 
+- What is the main advantage of automating configuration with Ansible?
 - Ansible allows you to quickly install, update, add web servers to your network by using the same playbooks.
 
 The playbook implements the following tasks:
@@ -348,10 +348,13 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- List the IP addresses of the machines you are monitoring:
+- 10.0.0.5
+- 10.0.0.6
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Filebeats
+- Metricbeats
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
